@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TGA Cafe · Rajkot Morbi Highway</title>
+<meta name="description" content="TGA is a cozy, modern cafe on Rajkot Morbi Highway serving coffee, desserts, burgers, pizza and more. Visit us near Lajai Chockdi.">
+<meta property="og:title" content="TGA Cafe · Good Coffee. Great Moments.">
+<meta property="og:description" content="Coffee, desserts and comfort food on Rajkot Morbi Highway.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6efe4;--surface:#fffaf2;--ink:#2b1d14;--muted:#6b5846;--head:#3b2214;--caramel:#b9722b;--green:#5f7352;--line:#e4d6c3;--btn:#3b2214;--btnink:#fff7ea;--shadow:0 10px 30px rgba(59,34,20,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17100d;--surface:#241912;--ink:#f1e6d6;--muted:#bba892;--head:#f3e2c7;--caramel:#e0a053;--green:#9bb28a;--line:#3a2b21;--btn:#e0a053;--btnink:#1b110b;--shadow:0 10px 30px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17100d;--surface:#241912;--ink:#f1e6d6;--muted:#bba892;--head:#f3e2c7;--caramel:#e0a053;--green:#9bb28a;--line:#3a2b21;--btn:#e0a053;--btnink:#1b110b;--shadow:0 10px 30px rgba(0,0,0,.4);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;color:var(--head);line-height:1.1;margin:0}
+h2{font-size:clamp(2rem,5vw,3.2rem)}
+p{margin:0}a{color:inherit}
+:focus-visible{outline:3px solid var(--caramel);outline-offset:3px;border-radius:8px}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(4rem,9vw,7rem) 0}
+.eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel);font-weight:600;margin-bottom:.8rem;display:block}
+.lead{color:var(--muted);max-width:56ch;margin-top:1rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:600;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-p{background:var(--btn);color:var(--btnink)}
+.btn-g{border-color:currentColor;background:transparent}
+.btn-c{background:var(--caramel);color:#1b110b}
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .35s,box-shadow .35s,color .35s;color:#fff7ea}
+header.solid{background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);color:var(--head)}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font:700 1.9rem "Cormorant Garamond",serif;text-decoration:none;letter-spacing:.12em}
+.logo small{display:block;font:500 .6rem Inter,sans-serif;letter-spacing:.35em;opacity:.8;margin-top:-4px}
+.links{display:flex;align-items:center;gap:1.8rem;list-style:none;margin:0;padding:0}
+.links a{text-decoration:none;font-weight:500;font-size:.95rem;opacity:.9}
+.links a:not(.btn):hover{color:var(--caramel)}
+.burger{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:.3s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:860px){.burger{display:block}
+.links{position:fixed;inset:calc(72px + env(safe-area-inset-top,0px)) 0 auto 0;flex-direction:column;background:var(--surface);color:var(--head);padding:1.5rem;gap:1.2rem;box-shadow:var(--shadow);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.3s}
+.links.open{transform:none;opacity:1;visibility:visible}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff7ea;background:radial-gradient(circle at 78% 40%,#7a4524 0,#3b2214 45%,#1d120b 100%);overflow:hidden;padding:7rem 0 5rem}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.hero h1{color:#fff7ea;font-size:clamp(3rem,8vw,6rem);margin:.4rem 0 1.2rem}
+.hero h1 em{color:#e9b46b;font-style:italic}
+.hero p.sub{max-width:46ch;color:#ecdcc4;font-size:1.1rem}
+.cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}
+.badge{display:inline-flex;gap:.5rem;align-items:center;background:rgba(255,247,234,.12);border:1px solid rgba(255,247,234,.3);padding:.4rem 1rem;border-radius:999px;font-size:.85rem;animation:float 4s ease-in-out infinite}
+.cup{width:100%;max-width:420px;justify-self:center;animation:zoom 14s ease-in-out infinite alternate}
+.steam{stroke-dasharray:60;animation:steam 3.5s ease-in-out infinite}
+.steam:nth-child(2){animation-delay:1s}.steam:nth-child(3){animation-delay:2s}
+.rise>*{opacity:0;transform:translateY(26px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+.rise>*:nth-child(2){animation-delay:.12s}.rise>*:nth-child(3){animation-delay:.24s}.rise>*:nth-child(4){animation-delay:.36s}.rise>*:nth-child(5){animation-delay:.48s}
+@keyframes up{to{opacity:1;transform:none}}
+@keyframes float{50%{transform:translateY(-6px)}}
+@keyframes zoom{to{transform:scale(1.06) rotate(-1.5deg)}}
+@keyframes steam{0%{stroke-dashoffset:60;opacity:0}40%{opacity:.8}100%{stroke-dashoffset:-60;opacity:0}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.cup{max-width:240px;order:-1}}
+/* art tiles */
+.art{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,hsl(var(--h) 55% 62%),hsl(var(--h) 50% 38%));display:grid;place-items:center}
+.art span{font-size:4.2rem;filter:drop-shadow(0 6px 10px rgba(0,0,0,.25));transition:transform .5s}
+.art svg{width:84%;height:auto;transition:transform .5s;filter:drop-shadow(0 8px 10px rgba(0,0,0,.22))}.card:hover .art svg,.g:hover .art svg{transform:scale(1.07)}.g .art svg{width:auto;height:84%}.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .art span,.card:hover .art img,.g:hover .art span,.g:hover .art img{transform:scale(1.08)}
+/* menu */
+.tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin:2rem 0}
+.tab{padding:.55rem 1.1rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:.9rem;transition:.25s}
+.tab[aria-pressed=true]{background:var(--btn);color:var(--btnink);border-color:var(--btn)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.4rem}
+.card{background:var(--surface);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px)}
+.card .body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.card h3{font-size:1.5rem}
+.card p{color:var(--muted);font-size:.92rem;flex:1}
+.price{font-weight:600;color:var(--caramel);font-size:1.1rem}
+.pop{position:absolute;top:12px;left:12px;background:var(--caramel);color:#1b110b;font-size:.72rem;font-weight:600;padding:.25rem .7rem;border-radius:999px;z-index:2}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:.5rem}
+.note{font-size:.82rem;color:var(--muted);margin-top:1.5rem}
+/* about */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.stack{position:relative}
+.stack .art{aspect-ratio:4/5;border-radius:28px;box-shadow:var(--shadow)}
+.stack .art span{font-size:7rem}
+.stack .tag{position:absolute;right:-8px;bottom:24px;background:var(--surface);padding:1rem 1.3rem;border-radius:18px;box-shadow:var(--shadow);font-family:"Cormorant Garamond",serif;font-size:1.3rem;color:var(--head)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.8rem}
+.facts b{display:block;color:var(--head)}
+.facts div{color:var(--muted);font-size:.92rem}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+/* best */
+.best{background:#3b2214;color:#ecdcc4}
+.best h2{color:#fff7ea}.best .lead{color:#d8c4a6}
+.best .card{background:#4a2c1a;box-shadow:none}.best .card h3{color:#fff7ea}.best .card p{color:#d8c4a6}.best .price{color:#e9b46b}
+.best .btn-p{background:#e9b46b;color:#1b110b}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:160px;gap:1rem;margin-top:2.5rem}
+.g{border:0;padding:0;border-radius:20px;overflow:hidden;cursor:zoom-in;position:relative;background:none}
+.g .art{height:100%;aspect-ratio:auto}
+.g.t{grid-row:span 2}.g.w{grid-column:span 2}
+.g em{position:absolute;left:0;right:0;bottom:0;padding:1.5rem 1rem .8rem;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;font-style:normal;font-size:.85rem;text-align:left}
+@media(max-width:760px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:130px}.g.w{grid-column:span 2}}
+dialog{border:0;padding:0;background:none;max-width:min(92vw,720px);width:100%;color:#fff}
+dialog::backdrop{background:rgba(15,8,4,.85)}
+dialog .art{aspect-ratio:4/3;border-radius:22px}dialog .art span{font-size:9rem}
+dialog p{text-align:center;margin-top:.8rem}
+dialog button{position:absolute;top:10px;right:10px;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.9);cursor:pointer;font-size:1.4rem}
+/* why */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;margin-top:2.5rem}
+.why div{background:var(--surface);padding:2rem 1.6rem;border-radius:22px;box-shadow:var(--shadow);transition:transform .3s}
+.why div:hover{transform:translateY(-5px)}
+.why i{font-style:normal;font-size:1.8rem;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:color-mix(in srgb,var(--green) 22%,transparent);margin-bottom:1rem}
+.why h3{font-size:1.4rem;margin-bottom:.4rem}.why p{color:var(--muted);font-size:.93rem}
+/* testimonials */
+.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem;margin-top:2.5rem}
+blockquote{margin:0;background:var(--surface);border:1px dashed var(--caramel);border-radius:22px;padding:1.8rem}
+blockquote p{font-family:"Cormorant Garamond",serif;font-size:1.35rem;color:var(--head);line-height:1.35}
+blockquote footer{margin-top:1rem;font-size:.82rem;color:var(--muted)}
+.sample{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:color-mix(in srgb,var(--caramel) 20%,transparent);color:var(--caramel);padding:.2rem .6rem;border-radius:999px;margin-bottom:.8rem}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem}
+.info{background:var(--surface);border-radius:24px;padding:2rem;box-shadow:var(--shadow);display:grid;gap:1.2rem}
+.info b{display:block;color:var(--head)}.info span{color:var(--muted)}
+.map{border-radius:24px;min-height:320px;background:repeating-linear-gradient(45deg,color-mix(in srgb,var(--green) 18%,var(--surface)) 0 14px,var(--surface) 14px 28px);display:grid;place-items:center;text-align:center;padding:2rem;border:1px solid var(--line)}
+.map div{background:var(--surface);padding:1.5rem;border-radius:18px;box-shadow:var(--shadow);max-width:300px}
+@media(max-width:860px){.visit{grid-template-columns:1fr}}
+footer.site{background:#1d120b;color:#cdb99c;padding:3.5rem 0 2rem}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
+.fg h3{color:#fff7ea;font:600 .85rem Inter,sans-serif;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.9rem}
+.fg ul{list-style:none;margin:0;padding:0;display:grid;gap:.45rem;font-size:.92rem}
+.fg a{text-decoration:none}.fg a:hover{color:#e9b46b}
+.copy{border-top:1px solid #3a2b21;margin-top:2.5rem;padding-top:1.4rem;font-size:.82rem}
+@media(max-width:860px){.fg{grid-template-columns:1fr 1fr}}
+.wa{position:fixed;right:max(1rem,env(safe-area-inset-right,0px));bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:40;background:#25a05a;color:#fff;padding:.8rem 1.1rem;border-radius:999px;text-decoration:none;font-weight:600;box-shadow:var(--shadow)}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv,.rise>*{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header id="top"><div class="wrap"><nav aria-label="Main">
+<a class="logo" href="#home" aria-label="TGA Cafe home">TGA<small>CAFE</small></a>
+<button class="burger" aria-expanded="false" aria-controls="links" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+<ul class="links" id="links">
+<li><a href="#home">Home</a></li><li><a href="#menu">Menu</a></li><li><a href="#about">About Us</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#visit">Contact</a></li>
+<li><a class="btn btn-c" href="#" data-wa="Hi TGA! I’d like to place an order.">Order Now</a></li>
+</ul></nav></div></header>
+
+<main>
+<section class="hero" id="home"><div class="wrap">
+<div class="rise">
+<span class="badge">☕ Freshly Brewed Daily</span>
+<h1>Good Coffee.<br><em>Great Moments.</em></h1>
+<p class="sub">A cozy stop on the Rajkot Morbi Highway for slow sips, warm bites and easy conversation. Come as you are, stay a little longer.</p>
+<div class="cta"><a class="btn btn-c" href="#menu">Explore Our Menu</a><a class="btn btn-g" href="#visit">Visit Our Cafe</a></div>
+</div>
+<svg class="cup" viewBox="0 0 300 300" role="img" aria-label="Illustration of a steaming coffee cup">
+<g fill="none" stroke="#e9b46b" stroke-width="5" stroke-linecap="round"><path class="steam" d="M110 90c-15-20 15-30 0-55"/><path class="steam" d="M150 90c-15-20 15-30 0-55"/><path class="steam" d="M190 90c-15-20 15-30 0-55"/></g>
+<ellipse cx="150" cy="250" rx="115" ry="18" fill="#2a170c"/>
+<path d="M55 110h190c0 70-18 120-95 120S55 180 55 110z" fill="#f6efe4"/>
+<path d="M245 130c40-5 40 55-5 60" fill="none" stroke="#f6efe4" stroke-width="14" stroke-linecap="round"/>
+<ellipse cx="150" cy="110" rx="95" ry="16" fill="#7a4524"/><ellipse cx="150" cy="110" rx="70" ry="10" fill="#b9722b"/>
+<path d="M120 108c15-8 45-8 60 0-15 6-45 6-60 0z" fill="#f6efe4" opacity=".85"/>
+</svg>
+</div></section>
+
+<section id="menu"><div class="wrap">
+<span class="eyebrow rv">Signature Menu</span><h2 class="rv">Made to be savoured</h2>
+<p class="lead rv">From the first espresso of the morning to a late-evening snack. Tap a category to browse.</p>
+<div class="tabs" id="tabs" role="group" aria-label="Menu categories"></div>
+<div class="grid" id="menuGrid" aria-live="polite"></div>
+<p class="note">Sample items and prices. Edit the MENU list in the script to match your real menu.</p>
+</div></section>
+
+<section id="about" style="background:var(--surface)"><div class="wrap split">
+<div class="stack rv"><div class="art" style="--h:28"><span>🪴</span></div><div class="tag">Warm lights,<br>warm people.</div></div>
+<div class="rv"><span class="eyebrow">About Us</span><h2>A corner of calm on the highway</h2>
+<p class="lead">TGA started with a simple idea: a place where good coffee, honest food and a relaxed room come together. Whether you’re travelling through, meeting friends or catching up on work, there’s always a seat and a warm welcome waiting.</p>
+<div class="facts"><div><b>Fresh</b>Prepared to order, every day.</div><div><b>Quality</b>Coffee made with care.</div><div><b>Ambience</b>Cozy, bright and unhurried.</div><div><b>Hospitality</b>Friendly service, always.</div></div>
+</div></div></section>
+
+<section class="best" id="best"><div class="wrap">
+<span class="eyebrow rv" style="color:#e9b46b">Best Sellers</span><h2 class="rv">Guest favourites</h2>
+<p class="lead rv">The plates and cups people come back for.</p>
+<div class="grid" id="bestGrid" style="margin-top:2.5rem"></div>
+<div style="margin-top:2.5rem"><a class="btn btn-p" href="#menu">See Full Menu</a></div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+<span class="eyebrow rv">Gallery</span><h2 class="rv">The TGA experience</h2>
+<div class="gal" id="gal"></div>
+<p class="note">Placeholder tiles. Add your own photos in the GALLERY list (see setup notes).</p>
+</div></section>
+<dialog id="lb" aria-label="Photo viewer"><button aria-label="Close">×</button><div id="lbBody"></div></dialog>
+
+<section style="background:var(--surface)"><div class="wrap">
+<span class="eyebrow rv">Why Choose Us</span><h2 class="rv">Little things, done well</h2>
+<div class="why">
+<div class="rv"><i>🥐</i><h3>Freshly Prepared Food</h3><p>Cooked and assembled when you order.</p></div>
+<div class="rv"><i>☕</i><h3>Quality Coffee</h3><p>Brewed with care, from espresso to frappe.</p></div>
+<div class="rv"><i>🕯️</i><h3>Cozy Ambience</h3><p>A relaxed space to unwind or catch up.</p></div>
+<div class="rv"><i>🤝</i><h3>Friendly Service</h3><p>Smiles and quick help, every visit.</p></div>
+</div></div></section>
+
+<section><div class="wrap">
+<span class="eyebrow rv">Testimonials</span><h2 class="rv">Kind words</h2>
+<div class="tg">
+<blockquote class="rv"><span class="sample">Sample review</span><p>“Lovely place to stop on the highway. The coffee hit the spot.”</p><footer>Placeholder · replace with a real guest review</footer></blockquote>
+<blockquote class="rv"><span class="sample">Sample review</span><p>“Cozy seating and a friendly team. Perfect for a catch-up.”</p><footer>Placeholder · replace with a real guest review</footer></blockquote>
+<blockquote class="rv"><span class="sample">Sample review</span><p>“Great snacks and desserts, and we didn’t wait long.”</p><footer>Placeholder · replace with a real guest review</footer></blockquote>
+</div></div></section>
+
+<section id="visit" style="background:var(--surface)"><div class="wrap">
+<span class="eyebrow rv">Visit Us</span><h2 class="rv">Come say hello</h2>
+<div class="visit">
+<div class="info rv">
+<div><b>Address</b><span>Rajkot Morbi Highway, near Lajai Chockdi, opp. Dhartidhan Hotel</span></div>
+<div><b>Phone</b><a href="tel:+918320923716">+91 83209 23716</a></div>
+<div><b>Opening hours (edit me)</b><span>Mon–Sun · 9:00 AM – 11:00 PM</span></div>
+<div class="cta" style="margin:0"><a class="btn btn-p" href="#" data-wa="Hi TGA! I have a question.">WhatsApp Us</a><a class="btn btn-g" target="_blank" rel="noopener" id="dir" href="#">Get Directions</a><a class="btn btn-g" href="tel:+918320923716">Call</a></div>
+</div>
+<div class="map rv"><div><b>Map placeholder</b><p style="color:var(--muted);font-size:.9rem;margin:.4rem 0 1rem">Paste your Google Maps embed here once you have it.</p><a class="btn btn-p" target="_blank" rel="noopener" id="dir2" href="#">Open in Maps</a></div></div>
+</div></div></section>
+</main>
+
+<footer class="site"><div class="wrap">
+<div class="fg">
+<div><a class="logo" href="#home" style="color:#fff7ea">TGA<small>CAFE</small></a><p style="margin-top:.8rem;font-size:.92rem;max-width:30ch">Good coffee, honest food, great moments.</p></div>
+<div><h3>Explore</h3><ul><li><a href="#menu">Menu</a></li><li><a href="#about">About Us</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#visit">Contact</a></li></ul></div>
+<div><h3>Contact</h3><ul><li><a href="tel:+918320923716">+91 83209 23716</a></li><li>Rajkot Morbi Highway</li><li>9:00 AM – 11:00 PM</li></ul></div>
+<div><h3>Follow</h3><ul><li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+</div>
+<p class="copy">© <span id="yr">2026</span> TGA Cafe. All rights reserved.</p>
+</div></footer>
+<a class="wa" href="#" data-wa="Hi TGA!" aria-label="Chat on WhatsApp">💬 WhatsApp</a>
+
+<script>
+/* ===== EDIT ME ===== */
+const PHONE="918320923716";
+const ADDRESS="Rajkot Morbi Highway, near Lajai Chockdi, opp Dhartidhan Hotel";
+const CATS=["All","Coffee","Cold & Frappe","Cakes","Burgers","Pizza & Snacks","Combos"];
+/* img: paste a photo URL or file path to replace the illustrated tile */
+const MENU=[
+{c:"Coffee",n:"Classic Espresso",d:"A short, bold shot to start the day.",p:80,e:"☕",h:25,img:"img/espresso.jpg"},
+{c:"Coffee",n:"Creamy Cappuccino",d:"Espresso with silky steamed milk and foam.",p:130,e:"🥛",h:30,pop:1,img:"img/cappuccino.jpg"},
+{c:"Cold & Frappe",n:"Iced Cold Coffee",d:"Chilled, smooth and refreshing.",p:140,e:"🧋",h:22,pop:1,img:"img/iced-coffee.jpg"},
+{c:"Cold & Frappe",n:"Mocha Frappe",d:"Blended coffee with a chocolatey finish.",p:170,e:"🍫",h:18,img:""},
+{c:"Cakes",n:"Chocolate Pastry",d:"A soft slice for the sweet tooth.",p:110,e:"🍰",h:12,img:""},
+{c:"Cakes",n:"Warm Brownie",d:"Fudgy and best shared.",p:120,e:"🍫",h:20,img:""},
+{c:"Burgers",n:"Classic Burger",d:"Stacked and served hot with fries.",p:150,e:"🍔",h:32,pop:1,img:"img/burger.jpg"},
+{c:"Burgers",n:"Grilled Sandwich",d:"Toasted golden with a savoury filling.",p:120,e:"🥪",h:40,img:"img/sandwich.jpg"},
+{c:"Pizza & Snacks",n:"Veggie Pizza",d:"Baked fresh and topped with colourful vegetables.",p:220,e:"🍕",h:8,pop:1,img:"img/pizza.jpg"},
+{c:"Pizza & Snacks",n:"Crispy Fries",d:"Golden, salted and shareable.",p:99,e:"🍟",h:45,img:"img/fries.jpg"},
+{c:"Combos",n:"Coffee + Snack Combo",d:"Any hot coffee with a snack of the day.",p:199,e:"🥐",h:35,img:""},
+{c:"Combos",n:"Friends Combo",d:"A shareable spread for the table.",p:449,e:"🍽️",h:15,img:""}];
+const GALLERY=[
+{t:"Coffee, poured slowly",img:"img/coffee-tools.jpg",e:"☕",h:25,k:"w"},{t:"Dessert time",e:"🍰",h:10,k:"t"},{t:"Cozy corners",e:"🛋️",h:30},
+{t:"Fresh from the kitchen",img:"img/pizza.jpg",e:"🍕",h:8},{t:"Friends & conversation",e:"🥂",h:150,k:"w"},{t:"Morning light",e:"🪟",h:40,k:"t"},{t:"Burger night",img:"img/burger.jpg",e:"🍔",h:32}];
+/* =================== */
+const $=(s,r=document)=>r.querySelector(s);
+const wa=t=>`https://wa.me/${PHONE}?text=${encodeURIComponent(t)}`;
+const mapUrl="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(ADDRESS);
+document.querySelectorAll("[data-wa]").forEach(a=>{a.href=wa(a.dataset.wa);a.target="_blank";a.rel="noopener"});
+$("#dir").href=mapUrl;$("#dir2").href=mapUrl;$("#yr").textContent=new Date().getFullYear();
+const S=b=>`<svg viewBox="0 0 200 150" aria-hidden="true"><ellipse cx="100" cy="130" rx="72" ry="8" fill="#000" opacity=".2"/>${b}</svg>`;
+const cup=(c,t="")=>`<g transform="${t}"><ellipse cx="100" cy="122" rx="60" ry="9" fill="#f6efe4"/><path d="M64 68h72c0 32-10 52-36 52S64 100 64 68z" fill="#fffaf2"/><path d="M136 78c22-2 20 26-2 28" fill="none" stroke="#fffaf2" stroke-width="8" stroke-linecap="round"/><ellipse cx="100" cy="68" rx="36" ry="7" fill="${c}"/></g>`;
+const A={
+esp:S(cup("#3b2214")+'<ellipse cx="100" cy="68" rx="24" ry="4" fill="#b9722b" opacity=".7"/>'),
+cap:S(cup("#e8cfa8")+'<path d="M100 78c-14-8-14-16-6-16 4 0 6 3 6 3s2-3 6-3c8 0 8 8-6 16z" fill="#7a4524"/>'),
+cold:S('<path d="M70 36h60l-6 88H76z" fill="#fff" fill-opacity=".35" stroke="#fff" stroke-width="3"/><path d="M73 62h54l-4 62H77z" fill="#7a4524"/><path d="M73 62h54l-1 12H74z" fill="#e8cfa8"/><rect x="84" y="48" width="16" height="16" rx="3" fill="#fff" opacity=".7"/><rect x="104" y="54" width="14" height="14" rx="3" fill="#fff" opacity=".6"/><path d="M110 14l-8 60" stroke="#5f7352" stroke-width="6" stroke-linecap="round"/>'),
+frap:S('<path d="M70 44h60l-6 80H76z" fill="#fff" fill-opacity=".3" stroke="#fff" stroke-width="3"/><path d="M73 60h54l-4 64H77z" fill="#a8683a"/><path d="M72 46c0-16 56-16 56 0 0 6-10 8-28 8s-28-2-28-8z" fill="#fffaf2"/><path d="M86 40q14-18 28 0" fill="none" stroke="#3b2214" stroke-width="5" stroke-linecap="round"/><path d="M112 12l-6 40" stroke="#b9722b" stroke-width="6" stroke-linecap="round"/>'),
+cake:S('<rect x="50" y="94" width="100" height="28" rx="6" fill="#5a3320"/><rect x="50" y="82" width="100" height="12" fill="#fffaf2"/><rect x="50" y="66" width="100" height="16" fill="#7a4524"/><path d="M50 66c0-12 100-12 100 0z" fill="#3b2214"/><circle cx="100" cy="52" r="9" fill="#c0392b"/>'),
+brw:S('<rect x="56" y="78" width="88" height="44" rx="8" fill="#4a2c1a"/><rect x="62" y="70" width="76" height="14" rx="6" fill="#5a3320"/><circle cx="100" cy="56" r="20" fill="#fffaf2"/><path d="M86 50q14 12 28 0" fill="none" stroke="#3b2214" stroke-width="5" stroke-linecap="round"/>'),
+bur:S('<path d="M52 66c0-30 96-30 96 0z" fill="#d89a4a"/><path d="M50 74q10 8 20 0t20 0 20 0 20 0 20 0v6H50z" fill="#6b9a4a"/><rect x="50" y="80" width="100" height="14" rx="7" fill="#5a3320"/><rect x="52" y="94" width="96" height="6" fill="#e9b46b"/><path d="M52 100h96c0 14-10 20-48 20s-48-6-48-20z" fill="#d89a4a"/><g fill="#fffaf2"><circle cx="80" cy="50" r="2"/><circle cx="100" cy="44" r="2"/><circle cx="120" cy="50" r="2"/></g>'),
+sand:S('<path d="M40 112L100 36l60 76z" fill="#e8c28a"/><path d="M52 112l48-60 48 60z" fill="#6b9a4a"/><path d="M64 112l36-46 36 46z" fill="#c0392b"/><path d="M40 112h120v10H40z" fill="#d89a4a"/>'),
+piz:S('<circle cx="100" cy="76" r="54" fill="#d89a4a"/><circle cx="100" cy="76" r="46" fill="#e9b46b"/><path d="M100 76V30M100 76h46M100 76l-32 32M100 76L54 62" stroke="#c0762a" stroke-width="2"/><g fill="#b03a2e"><circle cx="82" cy="58" r="8"/><circle cx="120" cy="62" r="8"/><circle cx="104" cy="96" r="8"/><circle cx="72" cy="88" r="7"/><circle cx="130" cy="90" r="6"/></g>'),
+fri:S('<g stroke="#f2c14e" stroke-width="9" stroke-linecap="round"><path d="M72 90L66 36M86 90L84 28M100 90V24M114 90l2-62M128 90l8-54"/></g><path d="M64 80h72l-8 44H72z" fill="#c0392b"/><rect x="82" y="92" width="36" height="12" rx="4" fill="#fffaf2" opacity=".85"/>'),
+cmb:S(cup("#7a4524","translate(-6 24) scale(.8)")+'<g transform="translate(14 0)"><path d="M110 120c-10-30 6-52 40-50 22 2 30 24 18 40-8 12-40 20-58 10z" fill="#d89a4a"/><path d="M130 72l6 46M148 76l-2 42" stroke="#b9722b" stroke-width="3"/></g>'),
+two:S(cup("#7a4524","translate(-8 24) scale(.8)")+cup("#e8cfa8","translate(50 24) scale(.8)")),
+sofa:S('<rect x="40" y="70" width="120" height="44" rx="14" fill="#6b7f5e"/><rect x="48" y="52" width="104" height="34" rx="14" fill="#7d9270"/><rect x="34" y="68" width="22" height="46" rx="10" fill="#566a4b"/><rect x="144" y="68" width="22" height="46" rx="10" fill="#566a4b"/><rect x="60" y="114" width="6" height="12" fill="#3b2214"/><rect x="134" y="114" width="6" height="12" fill="#3b2214"/><path d="M180 24v100" stroke="#3b2214" stroke-width="4"/><path d="M170 24h20l-4 16h-12z" fill="#e9b46b"/>'),
+win:S('<rect x="56" y="14" width="88" height="100" rx="8" fill="#ffe9b8"/><path d="M100 14v100M56 64h88" stroke="#fffaf2" stroke-width="5"/><circle cx="124" cy="38" r="10" fill="#fff" opacity=".8"/><rect x="44" y="114" width="112" height="8" rx="3" fill="#4a2c1a"/>')};
+const ART={"Classic Espresso":A.esp,"Creamy Cappuccino":A.cap,"Iced Cold Coffee":A.cold,"Mocha Frappe":A.frap,"Chocolate Pastry":A.cake,"Warm Brownie":A.brw,"Classic Burger":A.bur,"Grilled Sandwich":A.sand,"Veggie Pizza":A.piz,"Crispy Fries":A.fri,"Coffee + Snack Combo":A.cmb,"Friends Combo":A.two,"Coffee, poured slowly":A.cap,"Dessert time":A.cake,"Cozy corners":A.sofa,"Fresh from the kitchen":A.piz,"Friends & conversation":A.two,"Morning light":A.win,"Burger night":A.bur};
+const art=(i,lazy=true)=>`<div class="art" style="--h:${i.h}">${i.img?`<img ${lazy?'loading="lazy"':''} src="${i.img}" alt="${i.n||i.t}" onerror="this.remove()">`:""}${ART[i.n||i.t]||`<span aria-hidden="true">${i.e}</span>`}</div>`;
+const card=i=>`<article class="card rv">${i.pop?'<span class="pop">★ Popular</span>':""}${art(i)}<div class="body"><h3>${i.n}</h3><p>${i.d}</p><div class="row"><span class="price">₹${i.p}</span></div></div></article>`;
+let cur="All";
+function renderMenu(){$("#menuGrid").innerHTML=MENU.filter(i=>cur==="All"||i.c===cur).map(card).join("");observe()}
+$("#tabs").innerHTML=CATS.map(c=>`<button class="tab" aria-pressed="${c==="All"}">${c}</button>`).join("");
+$("#tabs").addEventListener("click",e=>{const b=e.target.closest(".tab");if(!b)return;cur=b.textContent;document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-pressed",t===b));renderMenu()});
+$("#bestGrid").innerHTML=MENU.filter(i=>i.pop).map(i=>card({...i,pop:0})).join("");
+$("#gal").innerHTML=GALLERY.map((g,x)=>`<button class="g ${g.k||""} rv" data-i="${x}" aria-label="Open photo: ${g.t}">${art({...g,n:g.t})}<em>${g.t}</em></button>`).join("");
+const lb=$("#lb");
+$("#gal").addEventListener("click",e=>{const b=e.target.closest(".g");if(!b)return;const g=GALLERY[b.dataset.i];$("#lbBody").innerHTML=art({...g,n:g.t},false)+`<p>${g.t}</p>`;lb.showModal()});
+lb.addEventListener("click",e=>{if(e.target===lb||e.target.tagName==="BUTTON")lb.close()});
+const io="IntersectionObserver"in window?new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12}):null;
+function observe(){document.querySelectorAll(".rv:not(.in)").forEach(el=>io?io.observe(el):el.classList.add("in"))}
+renderMenu();
+const hd=$("header"),bg=$(".burger"),ln=$("#links");
+const sc=()=>hd.classList.toggle("solid",scrollY>40||ln.classList.contains("open"));
+addEventListener("scroll",sc,{passive:true});sc();
+const tog=o=>{ln.classList.toggle("open",o);bg.setAttribute("aria-expanded",o);sc()};
+bg.onclick=()=>tog(!ln.classList.contains("open"));
+ln.addEventListener("click",e=>{if(e.target.closest("a"))tog(false)});
+addEventListener("keydown",e=>{if(e.key==="Escape")tog(false)});
+</script>
+</body>
+</html>
